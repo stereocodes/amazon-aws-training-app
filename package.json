@@ -1,0 +1,11 @@
+{
+  "name": "amazon-aws-training-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:stereocodes/amazon-aws-training-app.git",
+  "author": "Parker Hutchinson <hutchinsonparker@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0"
+  }
+}
