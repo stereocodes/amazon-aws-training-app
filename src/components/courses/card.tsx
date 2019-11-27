@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Tag from './tag.tsx';
 
-type MetaObject = {
+type postMetaObject = {
   title: string;
   data: string;
 };
+
+type courseMeta = {
+  language: string;
+  duration: string;
+  skill: string;
+  type: string;
+}
 
 interface ICard {
   title?: string;
   image?: string;
   averageColor: string;
-  meta?: MetaObject[];
+  postMeta?: postMetaObject[];
+  courseMeta?: courseMeta;
 }
 
 interface IStyledCard {
@@ -28,35 +37,15 @@ interface ITag {
 }
 
 const Card = (props: ICard) => {
-  const Tag = (props: { label: string }) => {
-    return (
-      <span>
-        <svg
-          width="9px"
-          height="9px"
-          viewBox="0 0 9 9"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <g
-            id="Symbols"
-            stroke="none"
-            strokeWidth="1"
-            fill="none"
-            fillRule="evenodd"
-          >
-            <g id="tag/icon/curriculum" stroke="#000000">
-              <polygon id="Triangle" points="4.5 0.875 8 7.875 1 7.875" />
-            </g>
-          </g>
-        </svg>
-        {props.label}
-      </span>
-    );
-  };
-  function metaGroup(metadata: MetaObject[]) {
-    return metadata.map((e: MetaObject, i: number) => (
+  function tagGroup(metadata: courseMeta) {
+    const metaRef = metadata;
+    return Object.keys(metadata).map((e:string, i:number) => {
+      //@ts-ignore
+      return (<Tag type={e} label={metaRef[e]}/>)
+    });
+  }
+  function metaGroup(metadata: postMetaObject[]) {
+    return metadata.map((e: postMetaObject, i: number) => (
       <span key={i}>
         <span>
           {e.title} {e.data}
@@ -100,14 +89,11 @@ const Card = (props: ICard) => {
 
         <div>
           <h4>{props.title}</h4>
-          <p>{metaGroup(props.meta)}</p>
+          <p>{metaGroup(props.postMeta)}</p>
         </div>
       </div>
       <StyledCardDrawer>
-        <Tag label="English" />
-        <Tag label="Curriculum" />
-        <Tag label="Advanced" />
-        <Tag label="4 Hours" />
+        {tagGroup(props.courseMeta)}
       </StyledCardDrawer>
     </StyledCard>
   );
@@ -116,7 +102,7 @@ const Card = (props: ICard) => {
 Card.defaultProps = {
   title: "testing title",
   averageColor: "black",
-  meta: [
+  postMeta: [
     {
       title: "Videos",
       data: "20"
@@ -125,7 +111,13 @@ Card.defaultProps = {
       title: "Updated",
       data: "10/12/19"
     }
-  ]
+  ],
+  courseMeta: {
+    language: "english",
+    skill: "advanced",
+    type: "curriculum",
+    duration: "4 hours"
+  }
 };
 
 
@@ -149,7 +141,7 @@ const StyledCardDrawer = styled.aside`
     font-family: Roboto-Regular;
     margin-right: 16px;
     margin-bottom: 16px;
-    svg {
+    img {
       margin-right: 5px;
     }
   }

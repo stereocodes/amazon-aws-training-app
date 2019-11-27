@@ -7,8 +7,8 @@
   "main": "./src/main-window.js",
   "typings": "./types",
   "build": {
-    "appId": "com.twitch.app",
-    "productName": "Twitch Kiosk",
+    "appId": "com.aws.training.app",
+    "productName": "Aws Training",
     "files": [
       "dist/",
       "index.html",
@@ -56,7 +56,6 @@
     "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
-    "electron-builder": "^21.2.0",
     "electron-devtools-installer": "^2.2.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -73,5 +72,9 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "electron": "^7.1.2",
+    "electron-builder": "^21.2.0"
   }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>nav/icon/support</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="24" cy="24.5" rx="24" ry="24.5"></ellipse>
+    </defs>
+    <g id="nav/icon/support" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18" transform="translate(6.000000, 6.000000)">
+            <g id="Group-16">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <ellipse stroke="#545B64" stroke-width="2" cx="24" cy="24.5" rx="25" ry="25.5"></ellipse>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(-4.000000, -2.000000)">
+                        <g id="Group-15" transform="translate(22.000000, 0.000000)">
+                            <rect id="Rectangle" fill="#FFFFFF" x="0" y="1" width="13" height="51" rx="6"></rect>
+                            <g id="Group-14" transform="translate(2.000000, 0.000000)" stroke="#EC912D" stroke-linecap="round" stroke-width="2">
+                                <line x1="8" y1="0" x2="8.5" y2="51.5272727" id="Line-4"></line>
+                                <line x1="1" y1="0" x2="1.5" y2="51.5272727" id="Line-4"></line>
+                            </g>
+                        </g>
+                        <g id="Group-13" transform="translate(0.000000, 18.000000)">
+                            <path d="M26.5,-18.2040816 L29.5,-18.2040816 C32.8137085,-18.2040816 35.5,-15.5177901 35.5,-12.2040816 L35.5,27.7959184 C35.5,31.1096269 32.8137085,33.7959184 29.5,33.7959184 L26.5,33.7959184 C23.1862915,33.7959184 20.5,31.1096269 20.5,27.7959184 L20.5,-12.2040816 C20.5,-15.5177901 23.1862915,-18.2040816 26.5,-18.2040816 Z" id="Rectangle" fill="#FFFFFF" transform="translate(28.000000, 7.795918) rotate(-270.000000) translate(-28.000000, -7.795918) "></path>
+                            <g id="Group-14" transform="translate(28.000000, 8.295918) rotate(-270.000000) translate(-28.000000, -8.295918) translate(22.500000, -19.204082)" stroke="#EC912D" stroke-linecap="round" stroke-width="2">
+                                <line x1="9.35" y1="0.56122449" x2="9.9" y2="53.9489796" id="Line-4"></line>
+                                <line x1="1.65" y1="0.56122449" x2="2.2" y2="53.9489796" id="Line-4"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <ellipse id="Oval" stroke="#545B64" stroke-width="2" fill="#F7F7F7" cx="24.5" cy="24.5" rx="15.5" ry="15"></ellipse>
+        </g>
+    </g>
+</svg>
