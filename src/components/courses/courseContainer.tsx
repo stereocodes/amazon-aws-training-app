@@ -4,6 +4,8 @@ import courses from '../../store/courses.ts';
 import styled from 'styled-components';
 import FormSearch from '../form/formSearch.tsx';
 import CourseFilters from './courseFilters.tsx';
+import FormSelect from '../form/formSelect.tsx';
+
 
 type Course = {
   title: string
@@ -27,7 +29,20 @@ const CourseContainer = () => {
   return (
     <>
     <CourseFilters>
-      <FormSearch />
+      <FormSearch 
+        callback={
+          (value:string) => {console.log(value)}
+        }
+      />
+      <FormSelect 
+        options={['one', 'two']}
+        name="sort"
+        defaultIndex={0}
+        label="Sort By:"
+        callback={
+          (value:string) => {console.log(value)}
+        }
+      />
     </CourseFilters>
     <StyledContainer>
       {formatCourses(courses)}
@@ -43,5 +58,5 @@ const StyledContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
-  grid-column: 2 / span 16;
+  grid-column: 2 / span 14;
 `;
