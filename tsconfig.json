@@ -30,6 +30,6 @@
   },
   "include": [
     "./src/**/*",
-    "./types/**/*", "tests/config/svgTransform.js", "tests/config/otfTransform.js", "tests/config/jpgTransform.js"
+    "./types/**/*"
   ]
 }
