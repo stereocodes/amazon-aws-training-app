@@ -9,10 +9,14 @@ const App = () => {
     <>
       <GlobalStyle />
       <div className="container">
-        <div className="drag-bar"></div>
+      <div className="drag-bar">
+        just
+      </div>
         <NavSidebar />
+        <main>
+          <CourseContainer />
+        </main>
         
-        <CourseContainer />
       </div>
     </>
   )
@@ -57,5 +61,10 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 8px;
     overflow: hidden;
     background: #fff;
+    
+    main{
+      display: grid;
+      grid-template-columns: repeat(22,1fr);
+    }
   }
 `;

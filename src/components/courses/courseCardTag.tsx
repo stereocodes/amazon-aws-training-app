@@ -9,7 +9,7 @@ interface ITag {
   label: string
 }
 
-const Tag = (props: ITag) => {
+const CourseCardTag = (props: ITag) => {
   function icon(type: string) {
     let icon = '';
     switch(type) {
@@ -38,4 +38,4 @@ const Tag = (props: ITag) => {
   );
 };
 
-export default Tag;
+export default CourseCardTag;

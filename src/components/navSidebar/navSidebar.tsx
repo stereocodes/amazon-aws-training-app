@@ -8,7 +8,6 @@ import training from '~/static/icons/nav/training.svg';
 import NavButton from './navButton.tsx';
 
 const NavSidebar = () => {
-  console.log(library);
   return (
     <StyledNav>
       <Logo />
@@ -27,7 +26,7 @@ const NavSidebar = () => {
         />
         <NavButton 
           image={support}
-          label="Certification"
+          label="Support"
         />
       </div>
       

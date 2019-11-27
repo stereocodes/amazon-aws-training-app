@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Tag from './tag.tsx';
+import CourseCardTag from './courseCardTag.tsx';
+import CourseBookmarkButton from './courseBookmarkButton.tsx';
 
 type postMetaObject = {
   title: string;
@@ -31,19 +32,15 @@ interface IStyledDrawer {
   backgroundColor: string;
 }
 
-interface ITag {
-  label: string;
-  type: string;
-}
-
-const Card = (props: ICard) => {
+const CourseCard = (props: ICard) => {
   function tagGroup(metadata: courseMeta) {
     const metaRef = metadata;
     return Object.keys(metadata).map((e:string, i:number) => {
       //@ts-ignore
-      return (<Tag type={e} label={metaRef[e]}/>)
+      return (<CourseCardTag type={e} label={metaRef[e]} key={i}/>)
     });
   }
+
   function metaGroup(metadata: postMetaObject[]) {
     return metadata.map((e: postMetaObject, i: number) => (
       <span key={i}>
@@ -54,39 +51,14 @@ const Card = (props: ICard) => {
       </span>
     ));
   }
+
   return (
     <StyledCard
       backgroundImage={props.image}
       backgroundColor={props.averageColor}
     >
       <div>
-        <span className="icon">
-          <svg
-            width="32px"
-            height="32px"
-            viewBox="0 0 32 32"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
-            <g
-              id="Symbols"
-              stroke="none"
-              strokeWidth="1"
-              fill="none"
-              fillRule="evenodd"
-            >
-              <g id="icon/bookmark/unchecked">
-                <polygon
-                  id="Rectangle"
-                  stroke="#000000"
-                  points="11 8 21 8 21 23 16 20.7832031 11 23"
-                />
-              </g>
-            </g>
-          </svg>
-        </span>
-
+        <CourseBookmarkButton />
         <div>
           <h4>{props.title}</h4>
           <p>{metaGroup(props.postMeta)}</p>
@@ -99,7 +71,7 @@ const Card = (props: ICard) => {
   );
 };
 
-Card.defaultProps = {
+CourseCard.defaultProps = {
   title: "testing title",
   averageColor: "black",
   postMeta: [
@@ -121,6 +93,7 @@ Card.defaultProps = {
 };
 
 
+export default CourseCard;
 
 const StyledCardDrawer = styled.aside`
   position: absolute;
@@ -148,7 +121,7 @@ const StyledCardDrawer = styled.aside`
 `;
 
 const StyledCard = styled.div`
-  width: 288px;
+  
   border-radius: 8px;
   background-image: url(${(p: IStyledCard) => p.backgroundImage});
   background-size: cover;
@@ -158,7 +131,9 @@ const StyledCard = styled.div`
   position: relative;
   overflow: hidden;
   padding: 16px;
-  display: inline-block;
+  display: block;
+  width: 100%;
+  grid-column: span 1;
   &:before {
     content: "";
     display: block;
@@ -225,16 +200,6 @@ const StyledCard = styled.div`
     text-transform: capitalize;
     padding-bottom: 8px;
   }
-  span.icon {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-    background: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
   &:hover {
     & > div div {
       bottom: 60px;
@@ -249,4 +214,3 @@ const StyledCard = styled.div`
   }
 `;
 
-export default Card;
