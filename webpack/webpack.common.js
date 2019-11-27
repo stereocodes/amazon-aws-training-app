@@ -8,7 +8,7 @@ module.exports = {
   },
   devtool: "source-map",
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".svg"],
+    extensions: [".ts", ".tsx", ".js", ".json", '.svg'],
     alias: {
       '~': Path.resolve(__dirname, '../src')
     }
@@ -20,10 +20,6 @@ module.exports = {
         loader: ["ts-loader"]
       },
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-      {
-        test: /\.inline.svg$/,
-        loader: 'svg-react-loader'
-      },
       {
         exclude: /\.inline.svg?$/,
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|svg|webp|ttf|woff|woff2|mp4)(\?.*)?$/,

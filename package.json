@@ -30,6 +30,12 @@
       ]
     }
   },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015"
+    ]
+  },
   "scripts": {
     "build": "yarn run build:electron-win && yarn run build:electron-mac",
     "build:react": "webpack --config webpack/webpack.config.prod.js  --colors",
@@ -42,18 +48,23 @@
     "test:watch": "jest --watch --verbose -e --coverage"
   },
   "dependencies": {
+    "@babel/core": "^7.7.4",
     "@types/jest": "^24.0.23",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "electron-builder": "^21.2.0",
     "electron-devtools-installer": "^2.2.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "file-loader": "^5.0.2",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-inlinesvg": "^1.2.0",
     "sass-loader": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "styled-components": "^4.4.1",

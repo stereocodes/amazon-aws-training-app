@@ -36,6 +36,7 @@ function createWindow () {
       fullscreen: false,
       darkTheme: true,
       titleBarStyle: 'customButtonsOnHover',
+      titlebarAppearsTransparent: true,
       webPreferences: {
         nodeIntegration: true,
         darkTheme: true,

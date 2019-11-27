@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../ui/logo.tsx';
+import library from '~/static/icons/nav/library.svg';
+import NavButton from './navButton.tsx';
 
 const NavSidebar = () => {
+  console.log(library);
   return (
     <StyledNav>
       <Logo />
+      <NavButton 
+        image={library}
+        label="Training"
+      />
     </StyledNav>
   )
 }
