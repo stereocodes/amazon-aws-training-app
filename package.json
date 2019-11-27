@@ -1,11 +1,66 @@
 {
   "name": "amazon-aws-training-app",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:stereocodes/amazon-aws-training-app.git",
   "author": "Parker Hutchinson <hutchinsonparker@gmail.com>",
   "license": "MIT",
+  "main": "./src/main-window.js",
+  "typings": "./types",
+  "build": {
+    "appId": "com.twitch.app",
+    "productName": "Twitch Kiosk",
+    "files": [
+      "dist/",
+      "index.html",
+      "src/main.js",
+      "package.json",
+      "icon.png",
+      "src/"
+    ],
+    "directories": {
+      "buildResources": "./",
+      "output": "./release",
+      "app": "./"
+    },
+    "extends": null,
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "yarn run build:electron-win && yarn run build:electron-mac",
+    "build:react": "webpack --config webpack/webpack.config.prod.js  --colors",
+    "build:electron-mac": "electron-builder",
+    "build:electron-win": "electron-builder build --win --x64",
+    "start:react": "webpack --config webpack/webpack.config.dev.js --watch",
+    "start:electron": "export NODE_ENV='development' && electron .",
+    "start:docz": "yarn docz dev",
+    "test": "jest",
+    "test:watch": "jest --watch --verbose -e --coverage"
+  },
   "dependencies": {
-    "react": "^16.12.0"
+    "@types/jest": "^24.0.23",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
+    "css-loader": "^3.2.0",
+    "electron-builder": "^21.2.0",
+    "electron-devtools-installer": "^2.2.4",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "styled-components": "^4.4.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
   }
 }
