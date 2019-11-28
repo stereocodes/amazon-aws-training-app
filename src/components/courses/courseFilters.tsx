@@ -16,8 +16,8 @@ const CourseFilters = (props: ICourseFilter) => {
 export default CourseFilters;
 
 const StyledCourseFilters = styled.div`
-  grid-column: 2 / span 16;
-  margin-bottom: 32px;
+  grid-column: 2 / span 14;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
+  margin-bottom: 32px;
 `;

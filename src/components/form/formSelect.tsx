@@ -47,7 +47,7 @@ export default FormSelect;
 
 const StyledFormSelect = styled.div`
   display: flex;
-  grid-column: 8 / span 3;
+  grid-column: 10 / span 3;
   align-self: center;
   position: relative;
   align-items: center;

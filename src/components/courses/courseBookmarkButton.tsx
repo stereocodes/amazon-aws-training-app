@@ -27,7 +27,7 @@ export default CourseBookmarkButton;
 
 
 const StyledButton = styled.button`
-  background: ${(p: IStyledButton) => p.active ? 'gold' : 'white'};
+  background: ${(p: IStyledButton) => p.active ? 'var(--color-HIGHLIGHT)' : 'white'};
   display: inline-block;
   width: 32px;
   height: 32px;

@@ -13,12 +13,14 @@ const FormSearch = (props: IFormSearch) => {
   
   return (
     <StyledFormSearch>
-      <input
-        type="text"
-        placeholder="Course Search"
-        onChange={(e) => changeCallback(e)}
-      />
-      <img src={iconSearch} alt=""/>
+      <div>
+        <input
+          type="text"
+          placeholder="Course Search"
+          onChange={(e) => changeCallback(e)}
+        />
+        <img src={iconSearch} alt=""/>
+      </div>
     </StyledFormSearch>
     
   )
@@ -27,10 +29,6 @@ const FormSearch = (props: IFormSearch) => {
 export default FormSearch;
 
 const StyledFormSearch = styled.div`
-  background: var(--color-MISTY);
-  color: black;
-  border-radius: 8px;
-  padding: 12px 16px;
   grid-column: span 5;
   display: flex;
   align-items: center;
@@ -39,10 +37,19 @@ const StyledFormSearch = styled.div`
     padding: 5px;
     background: none;
     font-size: 1.6rem;
-    
+    margin: 0;
   }
   img{
     display: inline-block;
     max-width: 32px;
+  }
+  & > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: var(--color-MISTY);
+    color: black;
+    border-radius: 8px;
+    padding: 16px 16px;
   }
 `;

@@ -30,7 +30,13 @@ const CourseContainer = () => {
   }
   return (
     <>
-    <FormCategorySelect />
+    <FormCategorySelect 
+      categories={[
+        {key: 'all', label: 'All Courses'},
+        {key: 'digital', label: 'Digital Training'},
+        {key: 'classroom', label: 'Classroom Training'},
+      ]}
+    />
     <CourseFilters>
       <FormSearch 
         callback={
@@ -53,7 +59,9 @@ const CourseContainer = () => {
           (value:string) => {console.log(value)}
         }
       />
-      <StyledCoursetotal>{`${courses.length} Courses`}</StyledCoursetotal>
+      <StyledCoursetotal>
+        {`${courses.length} Courses`}
+      </StyledCoursetotal>
     </CourseFilters>
     <StyledContainer>
       {formatCourses(courses)}

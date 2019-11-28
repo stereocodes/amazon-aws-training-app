@@ -65,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
       overflow-y: scroll;
       height: 100vh;
       padding-bottom: 32px;
+      align-content: start;
     }
   }
 `;

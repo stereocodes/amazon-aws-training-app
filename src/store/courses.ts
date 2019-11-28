@@ -28,6 +28,21 @@ const courses = [
     title: "Deep Dive into AWS IoT Authentication and Authorization",
     image: "https://i.pinimg.com/originals/7a/45/9b/7a459b27df502bba46924f86c437f046.jpg",
     color: "#56606A"
+  },
+  {
+    title: "Exam Readiness: AWS Certified SysOps Administrator - Associate (Japanese)",
+    color: "#776A50",
+    image: ""
+  },
+  {
+    title: "Deep Dive into AWS IoT Authentication and Authorization",
+    color: "#3772E6",
+    image: "https://assets.cloudacademy.com/bakery/media/uploads/entities/AWS_IntrotoRedshift.jpg"
+  },
+  {
+    title: "Deep Dive into AWS IoT Authentication and Authorization",
+    image: "https://i.pinimg.com/originals/7a/45/9b/7a459b27df502bba46924f86c437f046.jpg",
+    color: "#56606A"
   }
 ]
 
