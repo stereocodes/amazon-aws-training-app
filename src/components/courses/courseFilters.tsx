@@ -1,17 +1,13 @@
-import React,{ReactNode} from 'react';
-import styled from 'styled-components';
+import React, { ReactNode } from "react";
+import styled from "styled-components";
 
 interface ICourseFilter {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
 const CourseFilters = (props: ICourseFilter) => {
-  return (
-    <StyledCourseFilters>
-      {props.children}
-    </StyledCourseFilters>
-  )
-}
+  return <StyledCourseFilters>{props.children}</StyledCourseFilters>;
+};
 
 export default CourseFilters;
 

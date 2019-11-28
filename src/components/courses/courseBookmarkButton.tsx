@@ -1,33 +1,32 @@
-import React,{useState} from 'react';
-import styled from 'styled-components';
-import iconBookmark from '~/static/icons/ui/bookmark.svg';
+import React, { useState } from "react";
+import styled from "styled-components";
+import iconBookmark from "~/static/icons/ui/bookmark.svg";
 
 interface IStyledButton {
-  active: boolean
-} 
+  active: boolean;
+}
 
 const CourseBookmarkButton = () => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   function toggleButton() {
     if (toggle) {
-      setToggle(false)
+      setToggle(false);
     } else {
-      setToggle(true)
+      setToggle(true);
     }
   }
   return (
-    <StyledButton onClick={(e) => toggleButton()} active={toggle}>
+    <StyledButton onClick={e => toggleButton()} active={toggle}>
       <img src={iconBookmark} alt="" />
     </StyledButton>
-  )
-}
-
+  );
+};
 
 export default CourseBookmarkButton;
 
-
 const StyledButton = styled.button`
-  background: ${(p: IStyledButton) => p.active ? 'var(--color-HIGHLIGHT)' : 'white'};
+  background: ${(p: IStyledButton) =>
+    p.active ? "var(--color-HIGHLIGHT)" : "white"};
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -37,8 +36,8 @@ const StyledButton = styled.button`
   right: 0;
   transform-origin: center;
   transform: scale(1);
-  transition: all .4s;
-  &:hover{
-    transform: scale(1.2)
+  transition: all 0.4s;
+  &:hover {
+    transform: scale(1.2);
   }
 `;

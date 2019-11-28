@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import CourseCardTag from './courseCardTag.tsx';
-import CourseBookmarkButton from './courseBookmarkButton.tsx';
+import CourseCardTag from "./courseCardTag.tsx";
+import CourseBookmarkButton from "./courseBookmarkButton.tsx";
 
 type postMetaObject = {
   title: string;
@@ -13,7 +13,7 @@ type courseMeta = {
   duration: string;
   skill: string;
   type: string;
-}
+};
 
 interface ICard {
   title?: string;
@@ -35,9 +35,9 @@ interface IStyledDrawer {
 const CourseCard = (props: ICard) => {
   function tagGroup(metadata: courseMeta) {
     const metaRef = metadata;
-    return Object.keys(metadata).map((e:string, i:number) => {
+    return Object.keys(metadata).map((e: string, i: number) => {
       //@ts-ignore
-      return (<CourseCardTag type={e} label={metaRef[e]} key={i}/>)
+      return <CourseCardTag type={e} label={metaRef[e]} key={i} />;
     });
   }
 
@@ -64,9 +64,7 @@ const CourseCard = (props: ICard) => {
           <p>{metaGroup(props.postMeta)}</p>
         </div>
       </div>
-      <StyledCardDrawer>
-        {tagGroup(props.courseMeta)}
-      </StyledCardDrawer>
+      <StyledCardDrawer>{tagGroup(props.courseMeta)}</StyledCardDrawer>
     </StyledCard>
   );
 };
@@ -91,7 +89,6 @@ CourseCard.defaultProps = {
     duration: "4 hours"
   }
 };
-
 
 export default CourseCard;
 
@@ -121,7 +118,6 @@ const StyledCardDrawer = styled.aside`
 `;
 
 const StyledCard = styled.div`
-  
   border-radius: 8px;
   background-image: url(${(p: IStyledCard) => p.backgroundImage});
   background-size: cover;
@@ -216,4 +212,3 @@ const StyledCard = styled.div`
     }
   }
 `;
-

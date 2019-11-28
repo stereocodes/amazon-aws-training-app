@@ -1,49 +1,50 @@
-import React, {useEffect, useRef} from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useRef } from "react";
+import styled from "styled-components";
 
 interface IFormSelect {
   options: string[];
   name: string;
   defaultIndex: number;
   label: string;
-  callback: (option:string) => void;
+  callback: (option: string) => void;
 }
 
 const FormSelect = (props: IFormSelect) => {
   const selectRef = useRef(null);
-  
+
   function getOptions(data: string[]) {
-    return data.map((e:string, i:number) => 
-      <option
-        value={e}
-        key={i}
-      >{e}</option>
-    )
+    return data.map((e: string, i: number) => (
+      <option value={e} key={i}>
+        {e}
+      </option>
+    ));
   }
 
   useEffect(() => {
     selectRef.current[props.defaultIndex].selected = true;
-  },[]);
+  }, []);
 
   function changeCallback(e: any) {
     props.callback(e.target.value);
   }
 
   return (
-    <StyledFormSelect >
+    <StyledFormSelect>
       <label>{props.label}</label>
       <div>
-        <select name={props.name} ref={selectRef} onChange={(e) => changeCallback(e)}>
+        <select
+          name={props.name}
+          ref={selectRef}
+          onChange={e => changeCallback(e)}
+        >
           {getOptions(props.options)}
         </select>
       </div>
     </StyledFormSelect>
-  )
-}
+  );
+};
 
-
-export default FormSelect; 
-
+export default FormSelect;
 
 const StyledFormSelect = styled.div`
   display: flex;
@@ -51,8 +52,8 @@ const StyledFormSelect = styled.div`
   align-self: center;
   position: relative;
   align-items: center;
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     display: block;
     height: 40%;
     width: 1px;
@@ -64,22 +65,22 @@ const StyledFormSelect = styled.div`
     right: 16;
     transform: translateY(-50%);
   }
-  & > label{
+  & > label {
     white-space: nowrap;
     margin-right: 5px;
     color: #787878;
     font-size: 1.2rem;
   }
-  & > div{
-    border: 1px solid #D9D9D9;
+  & > div {
+    border: 1px solid #d9d9d9;
     padding: 8px;
     border-radius: 8px;
     width: 100%;
   }
-  select{
+  select {
     -webkit-appearance: none;
     background: none;
     font-size: 1.4rem;
-    width:100%;
+    width: 100%;
   }
 `;

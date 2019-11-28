@@ -1,38 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
-import Logo from '../ui/logo.tsx';
-import library from '~/static/icons/nav/library.svg';
-import cert from '~/static/icons/nav/cert.svg';
-import support from '~/static/icons/nav/support.svg';
-import training from '~/static/icons/nav/training.svg';
-import NavButton from './navButton.tsx';
+import React from "react";
+import styled from "styled-components";
+import Logo from "../ui/logo.tsx";
+import library from "~/static/icons/nav/library.svg";
+import cert from "~/static/icons/nav/cert.svg";
+import support from "~/static/icons/nav/support.svg";
+import training from "~/static/icons/nav/training.svg";
+import NavButton from "./navButton.tsx";
 
 const NavSidebar = () => {
   return (
     <StyledNav>
       <Logo />
       <div>
-        <NavButton 
-          image={library}
-          label="Training"
-        />
-        <NavButton 
-          image={cert}
-          label="Certification"
-        />
-        <NavButton 
-          image={training}
-          label="Partner Training"
-        />
-        <NavButton 
-          image={support}
-          label="Support"
-        />
+        <NavButton image={library} label="Training" />
+        <NavButton image={cert} label="Certification" />
+        <NavButton image={training} label="Partner Training" />
+        <NavButton image={support} label="Support" />
       </div>
-      
     </StyledNav>
-  )
-}
+  );
+};
 
 const StyledNav = styled.div`
   background: var(--color-MISTY);
@@ -44,15 +31,15 @@ const StyledNav = styled.div`
   border-bottom-left-radius: 20;
   text-align: center;
   padding-top: 50px;
-  svg{
+  svg {
     display: inline-block;
     margin-bottom: 100px;
   }
-  div{
+  div {
     display: flex;
     text-align: center;
     flex-direction: column;
-    & > button{
+    & > button {
       margin-bottom: 50px;
     }
   }

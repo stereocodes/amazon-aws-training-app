@@ -1,32 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
-
+import React from "react";
+import styled from "styled-components";
 
 interface INavButton {
-  image: string
-  label: string
+  image: string;
+  label: string;
 }
 
 const NavButton = (props: INavButton) => {
   return (
     <StyledButton>
-      <img src={props.image} alt=""/>
+      <img src={props.image} alt="" />
       <span>{props.label}</span>
     </StyledButton>
-  )
-}
+  );
+};
 
 export default NavButton;
 
-
 const StyledButton = styled.button`
   background: none;
-  text-align: center
-  img{
+  text-align: center img {
     display: inline-block;
     margin-bottom: 15px;
   }
-  span{
+  span {
     display: block;
     width: 100%;
     text-align: center;
@@ -35,5 +32,4 @@ const StyledButton = styled.button`
     line-height: 20px;
     font-size: 1.4rem;
   }
-  
 `;

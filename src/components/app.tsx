@@ -1,28 +1,26 @@
-import React from 'react';
-import NavSidebar from './navSidebar/navSidebar.tsx';
-import CourseContainer from './courses/courseContainer.tsx';
-import { createGlobalStyle } from 'styled-components';
-
+import React from "react";
+import NavSidebar from "./navSidebar/navSidebar.tsx";
+import CourseContainer from "./courses/courseContainer.tsx";
+import { createGlobalStyle } from "styled-components";
+import ProfileMenu from "./profile/profileMenu.tsx";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
       <div className="container">
-      <div className="drag-bar"></div>
+        <div className="drag-bar"></div>
         <NavSidebar />
         <main>
           <CourseContainer />
+          <ProfileMenu />
         </main>
-        
       </div>
     </>
-  )
-}
-
+  );
+};
 
 export default App;
-
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -65,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
       overflow-y: scroll;
       height: 100vh;
       padding-bottom: 32px;
-      align-content: start;
+      justify-content: start;
     }
   }
 `;

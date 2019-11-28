@@ -1,28 +1,28 @@
-import React from 'react';
-import iconCurriculum from '~/static/icons/tag/curriculum.svg';
-import iconSkill from '~/static/icons/tag/advanced.svg';
-import iconDuration from '~/static/icons/tag/clock.svg';
-import iconLanguage from '~/static/icons/tag/language.svg';
+import React from "react";
+import iconCurriculum from "~/static/icons/tag/curriculum.svg";
+import iconSkill from "~/static/icons/tag/advanced.svg";
+import iconDuration from "~/static/icons/tag/clock.svg";
+import iconLanguage from "~/static/icons/tag/language.svg";
 
 interface ITag {
-  type: string
-  label: string
+  type: string;
+  label: string;
 }
 
 const CourseCardTag = (props: ITag) => {
   function icon(type: string) {
-    let icon = '';
-    switch(type) {
-      case 'type': 
+    let icon = "";
+    switch (type) {
+      case "type":
         icon = iconCurriculum;
-      break;
-      case 'language':
+        break;
+      case "language":
         icon = iconLanguage;
-        break; 
-      case 'duration':
+        break;
+      case "duration":
         icon = iconDuration;
         break;
-      case 'skill':
+      case "skill":
         icon = iconSkill;
         break;
       default:
