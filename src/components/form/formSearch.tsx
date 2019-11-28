@@ -30,8 +30,8 @@ const StyledFormSearch = styled.div`
   background: var(--color-MISTY);
   color: black;
   border-radius: 8px;
-  padding: 16px;
-  grid-column: span 6;
+  padding: 12px 16px;
+  grid-column: span 5;
   display: flex;
   align-items: center;
   input[type="text"]{

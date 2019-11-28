@@ -135,6 +135,7 @@ const StyledCard = styled.div`
   display: block;
   width: 100%;
   grid-column: span 1;
+
   &:before {
     content: "";
     display: block;

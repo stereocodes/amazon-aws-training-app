@@ -57,12 +57,14 @@ const GlobalStyle = createGlobalStyle`
     border: 5px solid var(--color-HIGHLIGHT);
     height: 100vh;
     border-radius: 8px;
-    overflow: hidden;
     background: #fff;
-    
+    overflow: hidden;
     main{
       display: grid;
       grid-template-columns: repeat(22,1fr);
+      overflow-y: scroll;
+      height: 100vh;
+      padding-bottom: 32px;
     }
   }
 `;

@@ -7,6 +7,7 @@ import CourseFilters from './courseFilters.tsx';
 import FormSelect from '../form/formSelect.tsx';
 import FormToggleButton from '../form/formToggleButton.tsx';
 import iconOrder from '~/static/icons/ui/order.svg';
+import FormCategorySelect from '../form/formCategorySelect.tsx';
 
 type Course = {
   title: string
@@ -29,6 +30,7 @@ const CourseContainer = () => {
   }
   return (
     <>
+    <FormCategorySelect />
     <CourseFilters>
       <FormSearch 
         callback={
@@ -51,6 +53,7 @@ const CourseContainer = () => {
           (value:string) => {console.log(value)}
         }
       />
+      <StyledCoursetotal>{`${courses.length} Courses`}</StyledCoursetotal>
     </CourseFilters>
     <StyledContainer>
       {formatCourses(courses)}
@@ -61,10 +64,16 @@ const CourseContainer = () => {
 
 export default CourseContainer;
 
+const StyledCoursetotal = styled.span`
+  align-self: center;
+  font-size: 1.4rem;
+  white-space: nowrap;
+`;
 
 const StyledContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   grid-column: 2 / span 14;
+  overflow-y: scroll;
 `;
