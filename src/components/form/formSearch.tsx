@@ -38,7 +38,7 @@ const StyledFormSearch = styled.div`
     width: calc(100% - 32px);
     padding: 5px;
     background: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     
   }
   img{

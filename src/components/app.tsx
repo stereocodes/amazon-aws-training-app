@@ -9,9 +9,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <div className="container">
-      <div className="drag-bar">
-        just
-      </div>
+      <div className="drag-bar"></div>
         <NavSidebar />
         <main>
           <CourseContainer />

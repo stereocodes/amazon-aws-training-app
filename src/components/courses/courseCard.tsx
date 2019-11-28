@@ -126,6 +126,7 @@ const StyledCard = styled.div`
   background-image: url(${(p: IStyledCard) => p.backgroundImage});
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: ${(p: IStyledCard) => p.backgroundColor};
   height: 384px;
   position: relative;
@@ -140,6 +141,7 @@ const StyledCard = styled.div`
     background-image: url(${(p: IStyledCard) => p.backgroundImage});
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-color: ${(p: IStyledCard) => p.backgroundColor};
     position: absolute;
     top: 0;

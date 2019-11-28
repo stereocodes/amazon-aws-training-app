@@ -5,7 +5,8 @@ import styled from 'styled-components';
 import FormSearch from '../form/formSearch.tsx';
 import CourseFilters from './courseFilters.tsx';
 import FormSelect from '../form/formSelect.tsx';
-
+import FormToggleButton from '../form/formToggleButton.tsx';
+import iconOrder from '~/static/icons/ui/order.svg';
 
 type Course = {
   title: string
@@ -35,10 +36,17 @@ const CourseContainer = () => {
         }
       />
       <FormSelect 
-        options={['one', 'two']}
+        options={['Latest', 'Language', 'Skill']}
         name="sort"
         defaultIndex={0}
         label="Sort By:"
+        callback={
+          (value:string) => {console.log(value)}
+        }
+      />
+      <FormToggleButton
+        toggleValues={{on: true, off: false}}
+        icon={iconOrder}
         callback={
           (value:string) => {console.log(value)}
         }
