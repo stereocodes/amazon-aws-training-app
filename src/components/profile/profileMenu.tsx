@@ -33,13 +33,20 @@ const StyledProfileMenu = styled.div`
   position: relative;
   & > div {
     display: inline-block;
-    display: flex-inline;
-    align-items: flex-end;
     span {
       display: block;
-      background: red;
-      height: 20px;
-      width: 20px;
+      background: var(--color-HIGHLIGHT);
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      bottom: 0;
+      left: 32px;
+      border-radius: 100px;
     }
+  }
+  button{
+    opacity:1;
+    transition: opacity .3s;
+    &:hover{opacity: .7;}
   }
 `;

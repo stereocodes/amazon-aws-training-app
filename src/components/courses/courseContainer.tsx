@@ -8,6 +8,8 @@ import FormSelect from "../form/formSelect.tsx";
 import FormToggleButton from "../form/formToggleButton.tsx";
 import iconOrder from "~/static/icons/ui/order.svg";
 import FormCategorySelect from "../form/formCategorySelect.tsx";
+import { Scrollbars } from 'react-custom-scrollbars';
+
 
 type Course = {
   title: string;
@@ -54,7 +56,18 @@ const CourseContainer = () => {
         />
         <StyledCoursetotal>{`${courses.length} Courses`}</StyledCoursetotal>
       </CourseFilters>
-      <StyledContainer>{formatCourses(courses)}</StyledContainer>
+      <StyledContainer>
+        <Scrollbars
+          autoHeight
+          autoHeightMax={800}
+        >
+          <div className="scrollarea">
+            {formatCourses(courses)}
+          </div>
+          
+        </Scrollbars>
+        
+      </StyledContainer>
     </>
   );
 };
@@ -68,9 +81,12 @@ const StyledCoursetotal = styled.span`
 `;
 
 const StyledContainer = styled.section`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 32px;
   grid-column: 2 / span 14;
-  overflow-y: scroll;
+  overflow: hidden;
+  .scrollarea {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+    padding-bottom: 50px;
+  }
 `;

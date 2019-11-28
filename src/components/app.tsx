@@ -60,10 +60,9 @@ const GlobalStyle = createGlobalStyle`
     main{
       display: grid;
       grid-template-columns: repeat(22,1fr);
-      overflow-y: scroll;
+      overflow: hidden;
       height: 100vh;
-      padding-bottom: 32px;
-      justify-content: start;
+      align-content: start;
     }
   }
 `;

@@ -29,8 +29,10 @@ function createWindow () {
   
   win = new BrowserWindow(
     { 
-      width: 800,
-      height: 600,
+      height: 1020,
+      width: 1400,
+      minHeight: 1020,
+      minWidth: 1400,
       transparent: true,
       frame:false,
       fullscreen: false,

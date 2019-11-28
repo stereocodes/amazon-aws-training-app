@@ -19,7 +19,8 @@ export default NavButton;
 
 const StyledButton = styled.button`
   background: none;
-  text-align: center img {
+  text-align: center; 
+  img {
     display: inline-block;
     margin-bottom: 15px;
   }
