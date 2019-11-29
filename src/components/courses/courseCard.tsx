@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import CourseCardTag from "./courseCardTag.tsx";
-import CourseBookmarkButton from "./courseBookmarkButton.tsx";
+import CourseCardTag from "./courseCardTag";
+import CourseBookmarkButton from "./courseBookmarkButton";
 
 type postMetaObject = {
   title: string;

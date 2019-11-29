@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ProfileImage from "./ProfileImage.tsx";
+import ProfileImage from "./profileImage";
 
 interface IProfileMenu {
   image?: string;

@@ -1,8 +1,8 @@
 import React from "react";
-import NavSidebar from "./navSidebar/navSidebar.tsx";
-import CourseContainer from "./courses/courseContainer.tsx";
+import NavSidebar from "./navSidebar/navSidebar";
+import CourseContainer from "./courses/courseContainer";
 import { createGlobalStyle } from "styled-components";
-import ProfileMenu from "./profile/profileMenu.tsx";
+import ProfileMenu from "./profile/profileMenu";
 import CourseSidebar from "./courses/courseSidebar";
 
 const App = () => {

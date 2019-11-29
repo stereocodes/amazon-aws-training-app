@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../ui/logo.tsx";
+import Logo from "../ui/logo";
 import library from "~/static/icons/nav/library.svg";
 import cert from "~/static/icons/nav/cert.svg";
 import support from "~/static/icons/nav/support.svg";
 import training from "~/static/icons/nav/training.svg";
-import NavButton from "./navButton.tsx";
+import NavButton from "./navButton";
 
 const NavSidebar = () => {
   return (
@@ -21,7 +21,7 @@ const NavSidebar = () => {
   );
 };
 
-const StyledNav = styled.div`
+const StyledNav = styled.nav`
   background: var(--color-MISTY);
   width: 171px;
   top: 0;

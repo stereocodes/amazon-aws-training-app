@@ -2,12 +2,12 @@ import React from "react";
 import Card from "./courseCard.tsx";
 import courses from "../../store/courses.ts";
 import styled from "styled-components";
-import FormSearch from "../form/formSearch.tsx";
-import CourseFilters from "./courseFilters.tsx";
-import FormSelect from "../form/formSelect.tsx";
-import FormToggleButton from "../form/formToggleButton.tsx";
+import FormSearch from "../form/formSearch";
+import CourseFilters from "./courseFilters";
+import FormSelect from "../form/formSelect";
+import FormToggleButton from "../form/formToggleButton";
 import iconOrder from "~/static/icons/ui/order.svg";
-import FormCategorySelect from "../form/formCategorySelect.tsx";
+import FormCategorySelect from "../form/formCategorySelect";
 import { Scrollbars } from 'react-custom-scrollbars';
 
 
