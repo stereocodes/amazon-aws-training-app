@@ -4,15 +4,13 @@ import { mount } from "enzyme";
 import CourseFilters from "../../../src/components/courses/courseFilters";
 
 describe("<CourseFilters/>", () => {
-  const props = {children: (<button>hello world</button>)};
-  const wrapper = mount(
-    <CourseFilters {...props} />
-  );
+  const props = { children: <button>hello world</button> };
+  const wrapper = mount(<CourseFilters {...props} />);
   it("should mount", () => {
     expect(wrapper.find("div").exists()).to.equal(true);
   });
   it("should render children", () => {
     expect(wrapper.props().children).to.equal(props.children);
-    expect(wrapper.find('button').exists()).to.equal(true);
+    expect(wrapper.find("button").exists()).to.equal(true);
   });
 });

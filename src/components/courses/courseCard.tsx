@@ -28,9 +28,6 @@ interface IStyledCard {
   backgroundColor?: string;
 }
 
-interface IStyledDrawer {
-  backgroundColor: string;
-}
 
 const CourseCard = (props: ICard) => {
   function tagGroup(metadata: courseMeta) {

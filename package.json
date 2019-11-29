@@ -69,6 +69,7 @@
     "react-html-parser": "^2.0.2",
     "react-inlinesvg": "^1.2.0",
     "sass-loader": "^8.0.0",
+    "sinon": "^7.5.0",
     "source-map-loader": "^0.2.4",
     "styled-components": "^4.4.1",
     "ts-jest": "^24.2.0",

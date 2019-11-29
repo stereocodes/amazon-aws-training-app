@@ -8,6 +8,7 @@ type TCategory = {
 
 interface IFormCategorySelect {
   categories: TCategory[];
+  callback?: (key: string) => void;
 }
 
 const FormCategorySelect = (props: IFormCategorySelect) => {
@@ -15,15 +16,31 @@ const FormCategorySelect = (props: IFormCategorySelect) => {
     return categories.map((e: TCategory, i: number) => (
       <StyledCategory key={i}>
         {i === 0 ? (
-          <input type="radio" value={e.key} name="category" defaultChecked />
+          <input
+            type="radio"
+            value={e.key}
+            name="category"
+            defaultChecked
+            onChange={onChangeCallback}
+          />
         ) : (
-          <input type="radio" value={e.key} name="category" />
+          <input
+            type="radio"
+            value={e.key}
+            name="category"
+            onChange={onChangeCallback}
+          />
         )}
         <span>{e.label}</span>
       </StyledCategory>
     ));
   }
 
+  function onChangeCallback(e: any) {
+    if (typeof props.callback === "function") {
+      props.callback(e.target.value);
+    }
+  }
   return (
     <StyledFFormCategorySelect>
       {createSelectList(props.categories)}

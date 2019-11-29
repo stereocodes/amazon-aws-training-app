@@ -31,6 +31,7 @@ const CourseContainer = () => {
           { key: "digital", label: "Digital Training" },
           { key: "classroom", label: "Classroom Training" }
         ]}
+        callback={(key) => (console.log(key))}
       />
       <CourseFilters>
         <FormSearch
