@@ -6,7 +6,7 @@ interface IFormSelect {
   name: string;
   defaultIndex: number;
   label: string;
-  callback: (option: string) => void;
+  callback?: (option: string) => void;
 }
 
 const FormSelect = (props: IFormSelect) => {
@@ -25,7 +25,9 @@ const FormSelect = (props: IFormSelect) => {
   }, []);
 
   function changeCallback(e: any) {
-    props.callback(e.target.value);
+    if(typeof props.callback === 'function') {
+      props.callback(e.target.value);
+    }
   }
 
   return (

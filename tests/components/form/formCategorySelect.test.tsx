@@ -21,7 +21,7 @@ describe("<FormCategorySelect />", () => {
     expect(wrapper.find('input[type="radio"]').exists()).to.equal(true);
   });
   it("should return key onChange", () => {
-    const onCategoryClick = sinon.spy();
+    const onCategoryChange = sinon.spy();
     const props = {
       categories: [
         {
@@ -29,14 +29,14 @@ describe("<FormCategorySelect />", () => {
           label: "testing label"
         }
       ],
-      callback: onCategoryClick
+      callback: onCategoryChange
     };
     const wrapper = shallow(<FormCategorySelect {...props} />);
     wrapper
       .find("input")
       .simulate("change", { target: { value: props.categories[0].key } });
 
-    expect(onCategoryClick).to.have.property("callCount", 1);
-    expect(onCategoryClick.args[0][0]).to.equal(props.categories[0].key);
+    expect(onCategoryChange).to.have.property("callCount", 1);
+    expect(onCategoryChange.args[0][0]).to.equal(props.categories[0].key);
   });
 });

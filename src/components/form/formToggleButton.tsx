@@ -9,9 +9,21 @@ interface IFormToggleButton {
 
 // aka styled checkbox
 const FormToggleButton = (props: IFormToggleButton) => {
+  const [toggle, setToggle] = useState(false);
+  function changeCallback() {
+    if(typeof props.callback === 'function') {
+      if (toggle) {
+        setToggle(false)
+        props.callback(props.toggleValues.off)
+      } else {
+        setToggle(true);
+        props.callback(props.toggleValues.on)
+      }
+    }
+  }
   return (
     <StyledFormToggleButton>
-      <input type="checkbox" id="testing" />
+      <input type="checkbox" id="testing" onChange={changeCallback}/>
       <img src={props.icon} />
       <label htmlFor="testing"></label>
     </StyledFormToggleButton>
