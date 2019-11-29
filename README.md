@@ -8,7 +8,8 @@ This is a proof of concept desktop application. The repos' soul purpose is to 1.
 
 ## Start
 
-```yarn run start```
+```yarn run start:electron```
+```yarn run start:react```
 
 This creates a new electron window instance using the electron cli. It then uses webpack dev server to create a local react application to the instanced window.
 
