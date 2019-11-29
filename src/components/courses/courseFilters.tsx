@@ -16,4 +16,5 @@ const StyledCourseFilters = styled.div`
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   margin-bottom: 32px;
+  width: 100%;
 `;

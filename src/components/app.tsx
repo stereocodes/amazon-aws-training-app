@@ -3,6 +3,7 @@ import NavSidebar from "./navSidebar/navSidebar.tsx";
 import CourseContainer from "./courses/courseContainer.tsx";
 import { createGlobalStyle } from "styled-components";
 import ProfileMenu from "./profile/profileMenu.tsx";
+import CourseSidebar from "./courses/courseSidebar";
 
 const App = () => {
   return (
@@ -11,10 +12,15 @@ const App = () => {
       <div className="container">
         <div className="drag-bar"></div>
         <NavSidebar />
-        <main>
-          <CourseContainer />
-          <ProfileMenu />
-        </main>
+        <section>
+          <main>
+            <CourseContainer />
+          </main>
+          <aside>
+            <ProfileMenu />
+            <CourseSidebar  />
+          </aside>
+        </section>
       </div>
     </>
   );
@@ -59,10 +65,23 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     main{
       display: grid;
-      grid-template-columns: repeat(22,1fr);
+      grid-template-columns: repeat(15,1fr);
       overflow: hidden;
       height: 100vh;
       align-content: start;
+      width: 60%;
+    }
+    
+    & > section{
+      display: flex;
+      align-items: flex-start;
+      & > aside{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        align-content: start;
+        width: 40%;
+        height: 100vh;
+      }
     }
   }
 `;

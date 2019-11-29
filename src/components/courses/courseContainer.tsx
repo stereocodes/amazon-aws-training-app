@@ -88,5 +88,6 @@ const StyledContainer = styled.section`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 32px;
     padding-bottom: 50px;
+    overflow: hidden;
   }
 `;

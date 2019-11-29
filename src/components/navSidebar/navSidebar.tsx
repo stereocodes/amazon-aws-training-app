@@ -12,7 +12,7 @@ const NavSidebar = () => {
     <StyledNav>
       <Logo />
       <div>
-        <NavButton image={library} label="Training" />
+        <NavButton image={library} label="Training Library" />
         <NavButton image={cert} label="Certification" />
         <NavButton image={training} label="Partner Training" />
         <NavButton image={support} label="Support" />

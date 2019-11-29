@@ -26,7 +26,7 @@ export default ProfileMenu;
 
 const StyledProfileMenu = styled.div`
   grid-row: 1;
-  grid-column: 21 / span 2;
+  grid-column: 9 / span 2;
   align-self: center;
   width: 100%;
   text-align: center;
