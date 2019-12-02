@@ -1,5 +1,7 @@
 # AWS TRAINING CONCEPT APP
 
+![](https://storage.googleapis.com/stereocode-github-assets/aws-repo-header.jpg)
+
 This is a proof of concept desktop application. The repos' soul purpose is to create a stunning proof of concept to showcase what is possible for AWS brand. 
 
 ## Install
