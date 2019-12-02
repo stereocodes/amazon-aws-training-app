@@ -145,6 +145,7 @@ const StyledCard = styled.div`
     z-index: 0;
     filter: blur(10px);
     opacity: 0;
+    border-radius: 8px;
     transition: opacity 0.4s;
   }
   &:after {

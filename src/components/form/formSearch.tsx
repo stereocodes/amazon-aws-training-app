@@ -28,7 +28,7 @@ const FormSearch = (props: IFormSearch) => {
 export default FormSearch;
 
 const StyledFormSearch = styled.div`
-  grid-column: span 5;
+  grid-column: span 6;
   display: flex;
   align-items: center;
   input[type="text"] {

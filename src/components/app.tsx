@@ -4,6 +4,7 @@ import CourseContainer from "./courses/courseContainer";
 import { createGlobalStyle } from "styled-components";
 import ProfileMenu from "./profile/profileMenu";
 import CourseSidebar from "./courses/courseSidebar";
+import FormCategorySelect from "./form/formCategorySelect";
 import {ipcRenderer} from "electron";
 
 const App = () => {
@@ -14,17 +15,25 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <div className="drag-bar" onDoubleClick={resizeDoubleClick}></div>
       <div className="container">
-        <div className="drag-bar" onDoubleClick={resizeDoubleClick}></div>
         <NavSidebar />
         <section>
+          <header>
+            <FormCategorySelect
+              categories={[
+                { key: "all", label: "All Courses" },
+                { key: "digital", label: "Digital Training" },
+                { key: "classroom", label: "Classroom Training" }
+              ]}
+              callback={(key:any) => (console.log(key))}
+            />
+            <ProfileMenu />
+          </header>
           <main>
             <CourseContainer />
-          </main>
-          <aside>
-            <ProfileMenu />
             <CourseSidebar  />
-          </aside>
+          </main>
         </section>
       </div>
     </>
@@ -70,25 +79,21 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 8px;
     background: #fff;
     overflow: hidden;
-    main{
-      display: grid;
-      grid-template-columns: repeat(15,1fr);
-      overflow: hidden;
-      height: 100vh;
-      align-content: start;
-      width: 60%;
-    }
-    
+    display: flex;
+    align-items: flex-start;
     & > section{
-      display: flex;
-      align-items: flex-start;
-      & > aside{
-        display: grid;
-        grid-template-columns: repeat(10,1fr);
-        align-content: start;
-        width: 40%;
-        height: 100vh;
-      }
+      display: grid;
+      grid-template-columns: repeat(22,1fr);
+      width: 100%;
     }
+    main, header{
+      display: grid;
+      grid-template-columns: repeat(22,1fr);
+      overflow: hidden;
+      height: auto;
+      align-content: start;
+      grid-column: 1 / span 22;
+    }
+
   }
 `;

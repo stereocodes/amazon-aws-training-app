@@ -26,10 +26,10 @@ export default ProfileMenu;
 
 const StyledProfileMenu = styled.div`
   grid-row: 1;
-  grid-column: 9 / span 2;
+  grid-column: 20 / span 2;
   align-self: center;
   width: 100%;
-  text-align: center;
+  text-align: right;
   position: relative;
   & > div {
     display: inline-block;
@@ -40,7 +40,7 @@ const StyledProfileMenu = styled.div`
       width: 8px;
       position: absolute;
       bottom: 0;
-      left: 32px;
+      right: 60px;
       border-radius: 100px;
     }
   }

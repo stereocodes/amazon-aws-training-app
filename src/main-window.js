@@ -62,6 +62,7 @@ function createWindow () {
   })
 }
 
+// 3 lines of code that makes this app 1000% better than slack
 ipcMain.on('maximize', ()=>{
   win.maximize();
 })

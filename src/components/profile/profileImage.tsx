@@ -14,7 +14,7 @@ export default ProfileImage;
 const StyledProfileImage = styled.div`
   background: url(${(p: IProfileImage) => p.image}) center / cover
     var(--color-MISTY) no-repeat no-repeat;
-  border-radius: 100px;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
   min-height: 50px;

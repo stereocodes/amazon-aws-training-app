@@ -24,40 +24,31 @@ const CourseContainer = () => {
     ));
   }
   return (
-    <>
-      <FormCategorySelect
-        categories={[
-          { key: "all", label: "All Courses" },
-          { key: "digital", label: "Digital Training" },
-          { key: "classroom", label: "Classroom Training" }
-        ]}
-        callback={(key) => (console.log(key))}
-      />
-      <CourseFilters>
-        <FormSearch
-          callback={(value: string) => {
-            console.log(value);
-          }}
-        />
-        <FormSelect
-          options={["Latest", "Language", "Skill"]}
-          name="sort"
-          defaultIndex={0}
-          label="Sort By:"
-          callback={(value: string) => {
-            console.log(value);
-          }}
-        />
-        <FormToggleButton
-          toggleValues={{ on: true, off: false }}
-          icon={iconOrder}
-          callback={(value: string) => {
-            console.log(value);
-          }}
-        />
-        <StyledCoursetotal>{`${courses.length} Courses`}</StyledCoursetotal>
-      </CourseFilters>
       <StyledContainer>
+        <CourseFilters>
+          <FormSearch
+            callback={(value: string) => {
+              console.log(value);
+            }}
+          />
+          <FormSelect
+            options={["Latest", "Language", "Skill"]}
+            name="sort"
+            defaultIndex={0}
+            label="Sort By:"
+            callback={(value: string) => {
+              console.log(value);
+            }}
+          />
+          <FormToggleButton
+            toggleValues={{ on: true, off: false }}
+            icon={iconOrder}
+            callback={(value: string) => {
+              console.log(value);
+            }}
+          />
+          <StyledCoursetotal>{`${courses.length} Courses`}</StyledCoursetotal>
+        </CourseFilters>
         <Scrollbars
           autoHeight
           autoHeightMax={800}
@@ -68,8 +59,7 @@ const CourseContainer = () => {
           
         </Scrollbars>
         
-      </StyledContainer>
-    </>
+    </StyledContainer>
   );
 };
 
@@ -82,7 +72,7 @@ const StyledCoursetotal = styled.span`
 `;
 
 const StyledContainer = styled.section`
-  grid-column: 2 / span 14;
+  grid-column: 2 / span 12;
   overflow: hidden;
   .scrollarea {
     display: grid;
