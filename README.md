@@ -1,6 +1,6 @@
 # AWS TRAINING CONCEPT APP
 
-This is a proof of concept desktop application. The repos' soul purpose is to 1. Create a stunning proof of concept to showcase what is possible 2. impress amazon so that they hire me(i hope). 
+This is a proof of concept desktop application. The repos' soul purpose is to create a stunning proof of concept to showcase what is possible for AWS brand. 
 
 ## Install
 
