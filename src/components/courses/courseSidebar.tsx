@@ -16,7 +16,7 @@ const CourseSidebar = () => {
     <StyledCourseSidebar>
       <Scrollbars
           autoHeight
-          autoHeightMax={800}
+          autoHeightMax={850}
         >
           {ReactHtmlParser(fakeMarkup, {transform: transformer})}
       </Scrollbars>
