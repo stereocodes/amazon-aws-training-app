@@ -1,5 +1,5 @@
 const Path = require('path');
-
+const webpack = require('webpack');
 module.exports = {
   entry: Path.resolve(__dirname, "../src/index.tsx"),
   output: {
@@ -32,5 +32,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ExternalsPlugin('commonjs', [
+        'electron'
+    ])
+  ]
 }

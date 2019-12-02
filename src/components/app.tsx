@@ -4,13 +4,18 @@ import CourseContainer from "./courses/courseContainer";
 import { createGlobalStyle } from "styled-components";
 import ProfileMenu from "./profile/profileMenu";
 import CourseSidebar from "./courses/courseSidebar";
+import {ipcRenderer} from "electron";
 
 const App = () => {
+  function resizeDoubleClick() {
+    ipcRenderer.send('maximize', 'true');
+    console.log('is this working?')
+  }
   return (
     <>
       <GlobalStyle />
       <div className="container">
-        <div className="drag-bar"></div>
+        <div className="drag-bar" onDoubleClick={resizeDoubleClick}></div>
         <NavSidebar />
         <section>
           <main>
@@ -43,6 +48,8 @@ const GlobalStyle = createGlobalStyle`
   html{font-size: 62.5%;}
   body{
     font-family: sans-serif;
+    width:100%;
+    background: black
   }
   .drag-bar{
     -webkit-app-region: drag;

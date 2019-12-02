@@ -2,9 +2,6 @@ const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const mainMenuTemplate = require('./electron-config/menus').mainMenuTemplate();
 const Path = require('path');
 
-ipcMain.on('config', (event, args)=>{
-  // console.log(args);
-})
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 // Keep a global reference of the window object, if you don't, the window will
@@ -54,6 +51,7 @@ function createWindow () {
   if (process.env["NODE_ENV"] === 'development') {
     // win.webContents.openDevTools()
   }
+  
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -63,6 +61,10 @@ function createWindow () {
     win = null
   })
 }
+
+ipcMain.on('maximize', ()=>{
+  win.maximize();
+})
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

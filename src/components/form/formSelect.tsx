@@ -25,7 +25,7 @@ const FormSelect = (props: IFormSelect) => {
   }, []);
 
   function changeCallback(e: any) {
-    if(typeof props.callback === 'function') {
+    if (typeof props.callback === "function") {
       props.callback(e.target.value);
     }
   }
