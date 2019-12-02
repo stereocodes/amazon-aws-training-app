@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
   padding-top: 50px;
   svg {
     display: inline-block;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
   div {
     display: flex;
